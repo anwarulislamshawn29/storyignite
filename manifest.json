@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "StoryIgnite",
+  "version": "1.0",
+  "description": "A creative writing prompt generator to spark your storytelling ideas.",
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icons/icon128.png"
+    }
+  },
+  "permissions": [
+    "storage"
+  ]
+}

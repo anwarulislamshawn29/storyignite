@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StoryIgnite</title>
+  <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1><img src="icons/logo.png" alt="StoryIgnite Logo" class="logo"> StoryIgnite</h1>
+      <button id="theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+    </div>
+    <div class="streak-counter">Streak: <span id="streak-count">0</span> days</div>
+    <div class="controls">
+      <label for="genre">Select Genre:</label>
+      <select id="genre">
+        <optgroup label="Prose">
+          <option value="fiction">Fiction</option>
+          <option value="non-fiction">Non-Fiction</option>
+          <option value="historical_fiction">Historical Fiction</option>
+          <option value="young_adult">Young Adult</option>
+          <option value="childrens_literature">Children's Literature</option>
+          <option value="memoir">Memoir</option>
+          <option value="travel_writing">Travel Writing</option>
+        </optgroup>
+        <optgroup label="Speculative">
+          <option value="fantasy">Fantasy</option>
+          <option value="science_fiction">Science Fiction</option>
+          <option value="horror">Horror</option>
+          <option value="dystopia">Dystopia</option>
+          <option value="fairy_tale">Fairy Tale</option>
+        </optgroup>
+        <optgroup label="Mystery & Action">
+          <option value="mystery">Mystery</option>
+          <option value="adventure">Adventure</option>
+          <option value="thriller">Thriller</option>
+        </optgroup>
+        <optgroup label="Emotional & Relational">
+          <option value="romance">Romance</option>
+          <option value="humor">Humor</option>
+          <option value="satire">Satire</option>
+        </optgroup>
+        <optgroup label="Poetry & Scripts">
+          <option value="poetry">Poetry</option>
+          <option value="scripts">Scripts</option>
+          <option value="song_lyrics">Song Lyrics</option>
+          <option value="screenwriting">Screenwriting</option>
+          <option value="playwriting">Playwriting</option>
+        </optgroup>
+        <optgroup label="Experimental">
+          <option value="flash_fiction">Flash Fiction</option>
+          <option value="experimental_writing">Experimental Writing</option>
+        </optgroup>
+      </select>
+      <div class="generate-buttons">
+        <button id="generate"><i class="fas fa-dice"></i> Generate Prompt</button>
+        <button id="regenerate" title="Regenerate Prompt"><i class="fas fa-sync-alt"></i></button>
+      </div>
+    </div>
+    <div class="prompt-container">
+      <div id="prompt-display" aria-live="polite"></div>
+      <div class="prompt-actions">
+        <div class="copy-wrapper">
+          <button id="copy-prompt">Copy</button>
+          <span id="copy-message" class="copy-message"></span>
+        </div>
+        <div class="social-share">
+          <button id="share-twitter" title="Share on Twitter"><i class="fab fa-twitter"></i></button>
+          <button id="share-facebook" title="Share on Facebook"><i class="fab fa-facebook-f"></i></button>
+          <button id="share-linkedin" title="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="favorite-actions">
+      <button id="save-favorite"><i class="fas fa-heart"></i> Save as Favorite</button>
+      <span id="save-message" class="save-message"></span>
+    </div>
+    <h2>Favorites</h2>
+    <ul id="favorites-list"></ul>
+    <footer class="footer">
+      <button id="privacy-btn">Privacy</button>
+      <button id="faq-btn">FAQ</button>
+      <button id="support-btn">Support</button>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
